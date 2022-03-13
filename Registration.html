@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cowin Registration</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/f4f16d2e68.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="registration">
+
+
+
+    <div id="regn1">
+        <h1 class="text-center text-primary text-decoration-underline">Personal Information</h1>
+        <div class="details">
+            <label for="fname" style="font-weight: bold; color: #000;">Name</label>
+            <input type="text" id="fname" class="input1"><i class="fas fa-star-of-life text-danger fa-1x" style="margin-left: -3%;" ></i>
+            <br> <br>
+            <label for="number" style="font-weight: bold; color: #000;">Phone Number</label>
+            <input type="text" id="number" class="input2"> <i class="fas fa-star-of-life text-danger fa-1x" style="margin-left: -3%;" ></i>
+            <br> <br>
+            <label for="birth" style="font-weight: bold; color: rgb(0, 0, 0);">Date of Birth</label>
+            <input type="text" id="birth" class="input3"><i class="fas fa-star-of-life text-danger fa-1x" style="margin-left: -3%;" ></i>
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <div id="regn2">
+            <h2 class="text-center text-dark fw-bolder text-decoration-underline">Residential Address</h2>
+            <div id=details1>
+                <label for="address1" style="font-weight: bold; color: #000;">Street address</label>
+                <input type="text" id="address1" placeholder="Address line" class="input4">
+                <label for="address2" style="font-weight: bold; color: #000; margin-left: 7%;">Street address Line2</label>
+                <input type="text" id="address2" placeholder="Address line" class="input5">
+                <br><br>
+                <label for="city" style="font-weight: bold; color: #000;">City</label>
+                <input type="text" id="city" placeholder="City name" class="input6">
+                <br><br>
+                <label for="Pcode" style="font-weight: bold; color: #000;">Postal Code</label>
+                <input type="text" id="Pcode" placeholder="Zip code" class="input7">
+                <br><br>
+                <p style="font-weight: bolder; color: #000;">By signing this form, I acknowledge that the information I've given in this form is accurate</p>
+                <label for="signing" class="sign" style="font-weight: bolder; color: #000;">Sign-in</label> <input type="radio" id="signing"><br>
+
+                <button class="btn btn-outline-warning" onclick="registerforVaccine()">Create Account</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

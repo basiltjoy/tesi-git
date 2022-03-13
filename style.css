@@ -1,0 +1,156 @@
+/*Registration page*/
+#registration{
+    height: 1100px;
+    background-image:url(" https://thumbs.gfycat.com/WarpedIllEquestrian-max-1mb.gif ");
+    background-size:cover; 
+    background-repeat:round;
+}
+
+#regn1{
+    border-style: solid;
+    padding-bottom: 50px;
+}
+
+.input1{
+    border-radius: 10%;
+    margin-left: 11.9%;
+  }
+  .input2{
+    border-radius: 10%;
+    margin-left: 1.2%;
+  }
+  .input3{
+    border-radius: 10%;
+    margin-left: 4%;
+  }
+
+.details{
+    margin-top: 5%;
+    margin-left: 33%;
+} 
+
+
+/*  regn2  */
+#details1{
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+.input4{
+    margin-left: 3%;
+}
+
+.input5{
+    margin-left: 3%;
+}
+
+.input6{
+    margin-left: 12.4%;
+}
+.input7{
+    margin-left: 5.4%;
+}
+.btn{
+    margin-left: 28%;
+    margin-top: 4%;
+}
+
+
+/*                            clogin                                        */
+#clogin{
+    background: rgb(217,235,232);
+    background: linear-gradient(90deg, rgba(217,235,232,1) 0%, rgba(70,209,84,1) 100%);
+background-repeat: no-repeat;
+height: 700px;
+}
+
+h1{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding-top: 35px;
+}
+
+#Vname{
+    margin-top: 4%;
+    margin-left: 36%;
+}
+
+#Vnumber{
+    margin-left: 36%;
+    margin-top: 5%;
+}
+
+#dbirth{
+    margin-left: 36%;
+    margin-top: 5%;
+}
+
+#button1{
+    margin-left: 32.5%;
+    margin-top: 8%;
+}
+
+#button2{
+    margin-left: 59.5%;
+    margin-top: -7%;
+}
+
+
+/*                            index                                        */
+body{
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    height: 0px;
+}
+
+#issue{
+    border-radius: 150px;
+    width: 296px;
+    height: 350px;
+    margin-left: 60%;
+    margin-top: -23%;
+} 
+
+#RaiseAnIssue{
+    margin-top: 10%;
+}
+
+a{
+    margin-left: 30px;
+}
+
+#travel{
+    margin-left: 53%;
+    margin-top: 24%;
+}
+
+#international{
+    margin-left: 4%;
+    margin-top: -7%;
+    border-radius: 19px;
+    width: 42%;
+    height: 196px;
+}
+
+.l1{
+    margin-top: 3%;
+    margin-left: 10%;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#result{
+    margin-left: 15%;
+    margin-top: 5%;
+    width: 370px;
+    background-color: #4158D0;
+    background-image: linear-gradient(
+43deg, #c3e0f6 0%, #ffcbfc 46%, #f8d390 100%);
+    border-radius: 5%;
+    padding-left: 6px;
+
+}

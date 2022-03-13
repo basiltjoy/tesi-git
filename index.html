@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cowid API</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://img1.digitallocker.gov.in/ndh/smart/images/logo_1.png" alt="none">
+            </a>
+            <button class="bg-success border-dark">Vaccination Services</button>
+            <button class="bg-success border-dark">Resources</button>
+            <button class="bg-success border-dark" onclick="logout2()">Log out</button>
+
+
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" style="margin-top: 8.5%;" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Images/caraousel1.png" class="d-block " style="height: 280px; width: 968px;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/982276-cowin.jpg" class="d-block" style="height: 280px;
+            width: 968px;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/vaccine Drive.webp" class="d-block " style="height: 280px; width: 968px;" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="l1">
+        <input type="search" id="pin" placeholder="Pincode">
+        <input type="text" id="Ddate" placeholder="Date">
+        <button type="submit" onclick="fetchCovidDetails()" id="search">Search</button>
+    </div>
+
+    <div class="Container">
+        <div id="result" style="font-weight: 500;">
+
+        </div>
+    </div>
+
+
+    <div id="travel">
+        <h2> International Travel Certificate</h2>
+        <p>Ready to travel the world? <br>Complete your vaccination and get a certificate now.</p>
+    </div>
+    <a href="https://prod-cdn.preprod.co-vin.in/assets/pdf/20211109_User+Guide_Download+Internation+Certificate.pdf">
+    <img src="./Images/travel.png" alt="none" id="international"></a>
+
+
+
+    <div id="RaiseAnIssue">
+        <h1 class="text-capitalize text-decoration-underline fw-bolder">Raise an issue</h1>
+        <p style="padding-top: 30px; margin-left: 30px; font-weight:500;">Raise an issue or get solutions to your CoWIN
+            <br> 
+            account and vaccination certificate related<br>
+            issues instantly..
+        </p>
+        <a href="https://selfregistration.cowin.gov.in/?returnUrl=certificate-correction"
+            style="text-decoration: none;">Certificate Corrections</a> <br>
+        <br>
+        <a href="https://selfregistration.cowin.gov.in/?returnUrl=certificate-correction%2Fpassport"
+            style="text-decoration: none;">Add Passport</a> <br>
+        <br>
+        <a href="https://prod-cdn.preprod.co-vin.in/assets/pdf/Dos_and_Donts_for_Citizens.pdf"
+            style="text-decoration: none;">Dos_and_Donts</a> <br>
+        <br>
+        <a href="https://sandbox.cowin.gov.in/contact-us" style="text-decoration: none;">Get in Touch</a> <br>
+        <img src="./Images/issue.png" alt="none" id="issue">
+    </div>
+
+
+
+    <div style="margin-top: 15%;">
+        <div _ngcontent-xrf-c116="" class="row mt-5">
+            <div _ngcontent-xrf-c116="" class="col-sm-12 col-md-4 mb-5 text-center">
+
+                <span class="badge bg-dark rounded-pill fs-3">1</span>
+
+                <p _ngcontent-xrf-c116="" class="accessibility-plugin-ac"><span _ngcontent-xrf-c116=""
+                        class="steps-count dashed-line"></span><span _ngcontent-xrf-c116="">Book an Appointment On
+                        <br>CoWIN or Walk Into Any <br>Vaccination Center</span></p><a _ngcontent-xrf-c116=""
+                    title="How to book your appointment on CoWIN" aria-label="How to book your appointment on CoWIN"
+                    target="_blank"
+                    href="https://prod-cdn.preprod.co-vin.in/assets/pdf/User_Guide_Citizen%20registration_18%2B.pdf"
+                    class="accessibility-plugin-ac"><img _ngcontent-xrf-c116=""
+                        src="https://prod-cdn.preprod.co-vin.in/assets/images/vaccinated_img1.png"
+                        class="img-fluid mb-2"><span _ngcontent-xrf-c116=""> </span></a>
+            </div>
+            <div _ngcontent-xrf-c116="" class="col-sm-12 col-md-4 mb-5 text-center">
+                <span class="badge bg-dark rounded-pill fs-3">2</span>
+                <p _ngcontent-xrf-c116="" class="accessibility-plugin-ac"><span _ngcontent-xrf-c116=""
+                        class="steps-count dashed-line"></span><span _ngcontent-xrf-c116="">Get Your Vaccination <br>
+                        Safely at the Time of Your <br> Appointment</span></p><a _ngcontent-xrf-c116=""
+                    title="Do’s and don’ts for getting vaccinated" aria-label="Do’s and don’ts for getting vaccinated"
+                    target="_blank" class="accessibility-plugin-ac"
+                    href="https://prod-cdn.preprod.co-vin.in/assets/pdf/Dos_and_Donts_for_Citizens.pdf"><img
+                        _ngcontent-xrf-c116=""
+                        src="https://prod-cdn.preprod.co-vin.in/assets/images/vaccinated_img2.png"
+                        class="img-fluid mb-2"><span _ngcontent-xrf-c116=""> </span></a>
+            </div>
+            <div _ngcontent-xrf-c116="" class="col-sm-12 col-md-4 mb-5 text-center telLang">
+                <span class="badge bg-dark rounded-pill fs-3">3</span>
+                <p _ngcontent-xrf-c116="" class="accessibility-plugin-ac"><span _ngcontent-xrf-c116=""
+                        class="steps-count"></span><span _ngcontent-xrf-c116="">Download Your Vaccination <br>
+                        Certificate
+                        from CoWIN <br> and Wait for Dose #2</span></p><a _ngcontent-xrf-c116=""
+                    title="Download your vaccine certificate" target="_blank"
+                    aria-label="Download your vaccine certificate" class="accessibility-plugin-ac"
+                    href="https://selfregistration.cowin.gov.in/vaccination-certificate"><img _ngcontent-xrf-c116=""
+                        src="https://prod-cdn.preprod.co-vin.in/assets/images/vaccinated_img3.png"
+                        class="img-fluid mb-2"><span _ngcontent-xrf-c116=""> </span></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
